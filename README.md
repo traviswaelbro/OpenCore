@@ -1,9 +1,26 @@
 # OpenCore
 
-_Configuration & References for Hackintosh_
+_Configuration & References for setting up a Hackintosh, mainly focused on boot configuration._
 
 This is nearly all based on instructions provided by the [OpenCore
 Install Guide (`dortania`)](https://dortania.github.io/OpenCore-Install-Guide/).
+
+Additional references include:
+- [almshary/Asus-Z170-A-Opencore 0.7.6](https://github.com/almshary/Asus-Z170-A-Opencore-0.7.6) - Hardware-specific configuration reference (same motherboard & CPU)
+- [shiruken/hackintosh](https://github.com/shiruken/hackintosh) - General instructions & references
+
+---
+
+## Contents
+
+* [Submodules](#submodules)
+* [Drivers, Kexts, & SSDTs](#drivers-kexts-ssdts)
+* [First-Time Repo Setup](#first-time-repo-setup)
+    * [OpenCorePkg](#opencorepkg)
+    * [GenSMBIOS](#gensmbios)
+    * [MountEFI](#mountefi)
+    * [ProperTree](#propertree)
+* [BIOS Configuration](#bios-configuration)
 
 ## Submodules
 
@@ -20,7 +37,7 @@ Install Guide (`dortania`)](https://dortania.github.io/OpenCore-Install-Guide/).
 
 These other directories were used to gather the appropriate files, as instructed per the documentation's [Gathering files](https://dortania.github.io/OpenCore-Install-Guide/ktext.html) section. These are the important configuration pieces for my particular setup. These are unlikely to be relevant for other hardware configurations; see the documentation for details.
 
-## First-Time Setup
+## First-Time Repo Setup
 
 When cloning this repo, you need to first initialize the submodules:
 
@@ -54,3 +71,19 @@ _You may need to check [the ProperTree FAQ](https://github.com/corpnewt/ProperTr
 ./ProperTree/Scripts/buildapp-select.command
 mv ./ProperTree/ProperTree.app /Applications/
 ```
+
+## BIOS Configuration
+
+The BIOS recommendations from OpenCore and other sources were mostly accurate. The main differences in my current configuration **bolded** below.
+
+_TODO: Build a more comprehensive list, including BIOS option paths._
+
+| Name | Option |
+| ---- | ------ |
+| **Intel Virtual Technology (VT-x)** | **Enabled** |
+| **VT-d** | **Enabled** |
+| CFG Lock | Disabled |
+| Fast Boot | Disabled |
+| Secure Boot | Disabled |
+| OS Type | Other OS |
+| SW Guard Extensions (SGX) | Disabled |
