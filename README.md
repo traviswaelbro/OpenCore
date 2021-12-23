@@ -14,13 +14,13 @@ Additional references include:
 ## Contents
 
 * [Submodules](#submodules)
+* [BIOS Configuration](#bios-configuration)
 * [Drivers, Kexts, & SSDTs](#drivers-kexts-ssdts)
 * [First-Time Repo Setup](#first-time-repo-setup)
     * [OpenCorePkg](#opencorepkg)
     * [GenSMBIOS](#gensmbios)
     * [MountEFI](#mountefi)
     * [ProperTree](#propertree)
-* [BIOS Configuration](#bios-configuration)
 
 ## Submodules
 
@@ -32,6 +32,22 @@ Additional references include:
     - This was suggested in the [Mount your EFI](https://dortania.github.io/OpenCore-Post-Install/universal/update.html#_2-mount-your-efi) section; it is used to easily mount the EFI partition so that the OpenCore configuration can be managed.
 - [ProperTree](https://github.com/corpnewt/ProperTree)
     - This was suggested in the [config.plis Setup](https://dortania.github.io/OpenCore-Install-Guide/config.plist) section; it is used to edit `.plist` files.
+
+## BIOS Configuration
+
+The BIOS recommendations from OpenCore and other sources were mostly accurate. The main differences in my current configuration **bolded** below.
+
+_TODO: Build a more comprehensive list, including BIOS option paths._
+
+| Name | Option |
+| ---- | ------ |
+| **Intel Virtual Technology (VT-x)** | **Enabled** |
+| **VT-d** | **Enabled** |
+| CFG Lock | Disabled |
+| Fast Boot | Disabled |
+| Secure Boot | Disabled |
+| OS Type | Other OS |
+| SW Guard Extensions (SGX) | Disabled |
 
 ## Drivers, Kexts, & SSDTs
 
@@ -71,19 +87,3 @@ _You may need to check [the ProperTree FAQ](https://github.com/corpnewt/ProperTr
 ./ProperTree/Scripts/buildapp-select.command
 mv ./ProperTree/ProperTree.app /Applications/
 ```
-
-## BIOS Configuration
-
-The BIOS recommendations from OpenCore and other sources were mostly accurate. The main differences in my current configuration **bolded** below.
-
-_TODO: Build a more comprehensive list, including BIOS option paths._
-
-| Name | Option |
-| ---- | ------ |
-| **Intel Virtual Technology (VT-x)** | **Enabled** |
-| **VT-d** | **Enabled** |
-| CFG Lock | Disabled |
-| Fast Boot | Disabled |
-| Secure Boot | Disabled |
-| OS Type | Other OS |
-| SW Guard Extensions (SGX) | Disabled |
