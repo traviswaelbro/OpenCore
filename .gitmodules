@@ -1,0 +1,12 @@
+[submodule "GenSMBIOS"]
+	path = GenSMBIOS
+	url = git@github.com:corpnewt/GenSMBIOS.git
+[submodule "MountEFI"]
+	path = MountEFI
+	url = git@github.com:corpnewt/MountEFI.git
+[submodule "ProperTree"]
+	path = ProperTree
+	url = git@github.com:corpnewt/ProperTree.git
+[submodule "OpenCorePkg"]
+	path = OpenCorePkg
+	url = git@github.com:acidanthera/OpenCorePkg.git
