@@ -15,9 +15,8 @@ Additional references include:
 
 * [Submodules](#submodules)
 * [BIOS Configuration](#bios-configuration)
-* [Drivers, Kexts, & SSDTs](#drivers-kexts-ssdts)
+* [Drivers, Kexts, & SSDTs](#drivers-kexts--ssdts)
 * [First-Time Repo Setup](#first-time-repo-setup)
-    * [OpenCorePkg](#opencorepkg)
     * [GenSMBIOS](#gensmbios)
     * [MountEFI](#mountefi)
     * [ProperTree](#propertree)
