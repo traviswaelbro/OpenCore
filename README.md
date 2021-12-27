@@ -56,7 +56,7 @@ _TODO: Build a more comprehensive list, including BIOS option paths._
 
 These other directories were used to gather the appropriate files, as instructed per the documentation's [Gathering files](https://dortania.github.io/OpenCore-Install-Guide/ktext.html) section. These are the important configuration pieces for my particular setup. These are unlikely to be relevant for other hardware configurations; see the documentation for details.
 
-These are also found in the appropriate directory within the `EFI/` backup directory.
+These are found in the `EFI/` backup directory, `./EFI/OC/`. _Note: SSDTs are `.aml` files found under the `ACPI` subdirectory._
 
 ## First-Time Repo Setup
 
