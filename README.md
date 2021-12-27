@@ -21,7 +21,9 @@ Additional references include:
     * [GenSMBIOS](#gensmbios)
     * [MountEFI](#mountefi)
     * [ProperTree](#propertree)
+* [Managing the OpenCore Configuration File](#managing-the-opencore-configuration-file)
 * [Graduating from USB to Native Boot](#graduating-from-usb-to-native-boot)
+* [Dual Boot](#dual-boot)
 
 ## Submodules
 
@@ -53,6 +55,8 @@ _TODO: Build a more comprehensive list, including BIOS option paths._
 ## Drivers, Kexts, & SSDTs
 
 These other directories were used to gather the appropriate files, as instructed per the documentation's [Gathering files](https://dortania.github.io/OpenCore-Install-Guide/ktext.html) section. These are the important configuration pieces for my particular setup. These are unlikely to be relevant for other hardware configurations; see the documentation for details.
+
+These are also found in the appropriate directory within the `EFI/` backup directory.
 
 ## First-Time Repo Setup
 
@@ -89,6 +93,20 @@ _You may need to check [the ProperTree FAQ](https://github.com/corpnewt/ProperTr
 mv ./ProperTree/ProperTree.app /Applications/
 ```
 
+## Managing the OpenCore Configuration File
+
+1. Edit the backup file under this repo's `EFI/OC/config.plist`
+    - Any other changes (such as additional Drivers, Kexts, etc.) should also be made directly to this repo's `EFI/` directory.
+2. Once the local `EFI/` directory is ready to try out, mount the appropriate "real" `EFI` volume _(either the primary macOS boot drive or the bootable USB)_
+    - `./MountEFI/MountEFI.command`, then complete the prompts
+3. Copy the local `EFI/` directory to overwrite the "real" `EFI` volume's `EFI/` directory
+    - This ensures that changes are made with version control first (to hopefully reduce the risk of FUBAR) and also incentivises it since we're regularly overwriting that "real" directory.
+4. Unmount the `EFI` volume, reboot, and cross your fingers
+
 ## Graduating from USB to Native Boot
 
 Once you're able to successfully (and reliably) boot from your USB drive, you can just follow instructions from [Moving OpenCore from USB to macOS Drive](https://dortania.github.io/OpenCore-Post-Install/universal/oc2hdd.html) so that the USB drive is no longer the most valuable component in your computer...
+
+## Dual Boot
+
+If OpenCore isn't detecting your Windows boot drive/partition, you can reference [Dualbooting with Windows](https://dortania.github.io/OpenCore-Multiboot/oc/win.html#dualbooting-with-windows) for help.
