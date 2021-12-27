@@ -95,7 +95,7 @@ mv ./ProperTree/ProperTree.app /Applications/
 
 ## Managing the OpenCore Configuration File
 
-1. Edit the backup file under this repo's `EFI/OC/config.plist`
+1. Edit the backup file under this repo's `EFI/OC/config.plist` (using `ProperTree`)
     - Any other changes (such as additional Drivers, Kexts, etc.) should also be made directly to this repo's `EFI/` directory.
 2. Once the local `EFI/` directory is ready to try out, mount the appropriate "real" `EFI` volume _(either the primary macOS boot drive or the bootable USB)_
     - `./MountEFI/MountEFI.command`, then complete the prompts
