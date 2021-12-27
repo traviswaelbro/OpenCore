@@ -21,6 +21,7 @@ Additional references include:
     * [GenSMBIOS](#gensmbios)
     * [MountEFI](#mountefi)
     * [ProperTree](#propertree)
+* [Graduating from USB to Native Boot](#graduating-from-usb-to-native-boot)
 
 ## Submodules
 
@@ -31,7 +32,7 @@ Additional references include:
 - [MountEFI](https://github.com/corpnewt/MountEFI)
     - This was suggested in the [Mount your EFI](https://dortania.github.io/OpenCore-Post-Install/universal/update.html#_2-mount-your-efi) section; it is used to easily mount the EFI partition so that the OpenCore configuration can be managed.
 - [ProperTree](https://github.com/corpnewt/ProperTree)
-    - This was suggested in the [config.plis Setup](https://dortania.github.io/OpenCore-Install-Guide/config.plist) section; it is used to edit `.plist` files.
+    - This was suggested in the [config.plist Setup](https://dortania.github.io/OpenCore-Install-Guide/config.plist) section; it is used to edit `.plist` files.
 
 ## BIOS Configuration
 
@@ -87,3 +88,7 @@ _You may need to check [the ProperTree FAQ](https://github.com/corpnewt/ProperTr
 ./ProperTree/Scripts/buildapp-select.command
 mv ./ProperTree/ProperTree.app /Applications/
 ```
+
+## Graduating from USB to Native Boot
+
+Once you're able to successfully (and reliably) boot from your USB drive, you can just follow instructions from [Moving OpenCore from USB to macOS Drive](https://dortania.github.io/OpenCore-Post-Install/universal/oc2hdd.html) so that the USB drive is no longer the most valuable component in your computer...
