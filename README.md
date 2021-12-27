@@ -101,6 +101,7 @@ mv ./ProperTree/ProperTree.app /Applications/
     - `./MountEFI/MountEFI.command`, then complete the prompts
 3. Copy the local `EFI/` directory to overwrite the "real" `EFI` volume's `EFI/` directory
     - This ensures that changes are made with version control first (to hopefully reduce the risk of FUBAR) and also incentivises it since we're regularly overwriting that "real" directory.
+    - `cp ./EFI /Volumes/EFI/EFI`
 4. Unmount the `EFI` volume, reboot, and cross your fingers
 
 ## Graduating from USB to Native Boot
