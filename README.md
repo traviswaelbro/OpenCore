@@ -2,6 +2,7 @@
 
 _Configuration & References for setting up a Hackintosh, mainly focused on boot configuration._
 
+
 This is nearly all based on instructions provided by the [OpenCore
 Install Guide (`dortania`)](https://dortania.github.io/OpenCore-Install-Guide/).
 
